@@ -1,0 +1,50 @@
+<section id="experience" class="experience reveal-section">
+  <div class="section-label">Career</div>
+  <div class="section-title">Work experience</div>
+
+  @for (exp of experiences; track exp.company) {
+    <div class="exp-card reveal-item">
+      <div class="exp-header">
+        <div class="exp-logo">{{ exp.logoText }}</div>
+        <div>
+          <div class="exp-company">{{ exp.company }}</div>
+          <div class="exp-meta">{{ exp.period }} · {{ exp.location }}</div>
+        </div>
+      </div>
+
+      <div class="timeline">
+        @for (role of exp.roles; track role.title; let last = $last) {
+          <div class="timeline-item">
+            <div class="timeline-dot"
+                 [class.current]="role.badge === 'current'">
+            </div>
+
+            <div class="role-header">
+              <span class="role-title">{{ role.title }}</span>
+              @if (role.badge === 'current') {
+                <span class="badge badge-current">Current</span>
+              }
+              @if (role.badge === 'promoted') {
+                <span class="badge badge-promoted">↑ Promoted</span>
+              }
+            </div>
+
+            <div class="role-client">{{ role.client }}</div>
+            <div class="role-period">{{ role.period }}</div>
+            <p class="role-desc">{{ role.description }}</p>
+
+            <div class="tech-pills">
+              @for (tech of role.techs; track tech.label) {
+                <span class="tech-pill">{{ tech.icon }} {{ tech.label }}</span>
+              }
+            </div>
+
+            @if (!last) {
+              <hr class="role-divider">
+            }
+          </div>
+        }
+      </div>
+    </div>
+  }
+</section>

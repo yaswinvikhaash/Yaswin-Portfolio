@@ -1,0 +1,25 @@
+<section id="skills" class="skills reveal-section">
+  <div class="section-label">Technical skills</div>
+  <div class="section-title">My toolkit</div>
+
+  <div class="tabs">
+    @for (tab of tabs; track tab.id) {
+      <button
+        class="tab-btn"
+        [class.active]="activeTab() === tab.id"
+        (click)="activeTab.set(tab.id)">
+        {{ tab.label }}
+      </button>
+    }
+  </div>
+
+  <div class="skills-grid">
+    @for (skill of currentItems; track skill.name) {
+      <div class="skill-card reveal-item">
+        <div class="skill-glow" [style.border-color]="skill.glowColor"></div>
+        <div class="skill-icon">{{ skill.icon }}</div>
+        <span class="skill-name">{{ skill.name }}</span>
+      </div>
+    }
+  </div>
+</section>

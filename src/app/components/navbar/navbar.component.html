@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <span class="nav-logo">YN</span>
+
+  <ul class="nav-links">
+    @for (link of navLinks; track link.label) {
+      <li><a [href]="link.href">{{ link.label }}</a></li>
+    }
+  </ul>
+
+  <button class="theme-btn" (click)="theme.toggle()" aria-label="Toggle theme">
+    {{ theme.isDark() ? '☀️' : '🌙' }}
+  </button>
+
+  <button class="hamburger" (click)="toggleMobile()" aria-label="Menu">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+         stroke="currentColor" stroke-width="2">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+  </button>
+</nav>
+
+@if (mobileOpen()) {
+  <div class="mobile-menu">
+    @for (link of navLinks; track link.label) {
+      <a [href]="link.href" (click)="closeMobile()">{{ link.label }}</a>
+    }
+    
+  </div>
+}

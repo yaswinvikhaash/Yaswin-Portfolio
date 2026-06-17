@@ -1,0 +1,17 @@
+<section id="about" class="about reveal-section">
+  <div class="section-label">About me</div>
+  <div class="section-title">What I bring to the table</div>
+
+  <div class="about-grid">
+    @for (card of cards; track card.title) {
+      <div class="about-card reveal-item"
+           [style.--hover-color]="card.hoverColor">
+        <div class="about-icon" [style.background]="card.iconBg">
+          {{ card.icon }}
+        </div>
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.description }}</p>
+      </div>
+    }
+  </div>
+</section>

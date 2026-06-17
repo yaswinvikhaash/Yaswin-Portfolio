@@ -1,0 +1,69 @@
+<section id="projects" class="projects reveal-section">
+  <div class="section-label">Work</div>
+  <div class="section-title">Selected projects</div>
+
+  <div class="projects-layout">
+    <!-- Sidebar tab list -->
+    <div class="project-tabs-list">
+      @for (project of projects; track project.id) {
+        <button
+          class="project-tab-btn"
+          [class.active]="activeProjectId() === project.id"
+          (click)="selectProject(project.id)">
+          <span class="active-arrow">▶</span>
+          <div class="project-logo"
+               [style.background]="project.logoBg">
+            {{ project.logoText }}
+          </div>
+          <div class="project-tab-info">
+            <span class="name">{{ project.name }}</span>
+            <span class="desc">{{ project.subtitle }}</span>
+          </div>
+        </button>
+      }
+    </div>
+
+    <!-- Active project detail -->
+    <div class="project-detail">
+      <div class="project-card reveal-item">
+        <h3>{{ activeProject.name }}</h3>
+        <p class="sub">{{ activeProject.subtitle }}</p>
+        <p class="date">{{ activeProject.period }}</p>
+
+        <div class="tags">
+          @for (tag of activeProject.tags; track tag) {
+            <span class="tag">{{ tag }}</span>
+          }
+        </div>
+
+        <p class="project-desc">{{ activeProject.description }}</p>
+
+        <div class="contributions">
+          <h4>Key Contributions</h4>
+          <ul>
+            @for (item of activeProject.contributions; track item) {
+              <li>{{ item }}</li>
+            }
+          </ul>
+        </div>
+
+        <div class="stack">
+          <h4>Tech Stack</h4>
+          <div class="stack-chips">
+            @for (tech of activeProject.stack; track tech.label) {
+              <span class="chip">{{ tech.icon }} {{ tech.label }}</span>
+            }
+          </div>
+        </div>
+
+        <div class="impact">
+          @for (imp of activeProject.impact; track imp.label) {
+            <div class="impact-badge">
+              <strong>{{ imp.label }}:</strong> {{ imp.value }}
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
