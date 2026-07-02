@@ -182,7 +182,7 @@ export class ProjectsComponent implements AfterViewInit {
       id: 'proj-mc',
       company: 'Rich Text Editor',
       role: 'Text Editing Component',
-      period: 'Dec 2023 – Jun 2025',
+      period: 'Oct 2023 – Feb 2025',
       location: 'Chennai, India',
       logoText: '',
       logoBg: '',
