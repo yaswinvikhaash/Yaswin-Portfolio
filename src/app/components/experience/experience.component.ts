@@ -120,22 +120,22 @@ export class ExperienceComponent implements AfterViewInit {
       location: 'Chennai, India',
       roles: [
         {
-          title: 'Software Engineer level 1',
-          client: 'Rich Text Editor',
-          period: 'Mar 2026 – Present',
+          title: 'Software Engineer level 2',
+          client: 'Kanban',
+          period: 'Mar 2025 – Present',
           isCurrent: true,
           isPromoted: false,
-          description: ' worked and multipe feature and implemented varieaous feature and then fixed bugs and UI issues too',
-          techPills: [ '🔷 TypeScript', 'Angular', 'SCSS', 'Blazor', 'HTML'],
+          description: 'Architected seamless drag-and-drop task management capabilities within a feature-rich Kanban board, implementing precise DOM state management for low-latency interactions. Eliminated cross-component rendering anomalies and theme discrepancies to ensure pixel-perfect consistency across diverse client deployments.',
+          techPills: [ 'TypeScript', 'Angular', 'SCSS', 'Blazor', 'HTML'],
         },
         {
-          title: 'Software ENgineer level 2',
-          client: 'Kanban',
-          period: 'Oct 2023 – Feb 2026 · 2 yrs 4 mos',
+          title: 'Software Engineer level 1',
+          client: ' Rich Text Editor',
+          period: 'Oct 2023 – Feb 2025 · 2 yrs 4 mos',
           isCurrent: false,
           isPromoted: true,
-          description: 'Architected seamless drag-and-drop task management capabilities within a feature-rich Kanban board, implementing precise DOM state management for low-latency interactions. Eliminated cross-component rendering anomalies and theme discrepancies to ensure pixel-perfect consistency across diverse client deployments.',
-          techPills: [ '🔷 TypeScript', 'Angular', 'SCSS', 'Blazor', 'HTML'],
+          description: 'Worked on multiple features and implemented various features and then fixed bugs and UI issues too',
+          techPills: [ 'TypeScript', 'Angular', 'SCSS', 'Blazor', 'HTML'],
         }
       ]
     }
