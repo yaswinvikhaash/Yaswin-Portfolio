@@ -131,7 +131,7 @@ export class ExperienceComponent implements AfterViewInit {
         {
           title: 'Software Engineer level 1',
           client: ' Rich Text Editor',
-          period: 'Oct 2023 – Feb 2025 · 2 yrs 4 mos',
+          period: 'Oct 2023 – Feb 2025 · 1 yrs 4 mos',
           isCurrent: false,
           isPromoted: true,
           description: 'Worked on multiple features and implemented various features and then fixed bugs and UI issues too',
